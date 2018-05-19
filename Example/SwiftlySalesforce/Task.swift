@@ -18,6 +18,10 @@ public final class Task: Decodable {
 	public var isHighPriority: Bool = false
 	public var relatedRecord: RelatedRecord?
 	
+    init() {
+        id="123"
+        createdDate = Date()
+    }
 	public struct RelatedRecord: Decodable {
 		public var name: String
 		enum CodingKeys: String, CodingKey {
